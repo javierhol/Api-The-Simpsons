@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(220.55deg, #24cfc5 0%, #001c63 100%);
+}
+
+.title{
+  font-size: 3rem;
+  font-weight: 900;
+  color: yellow;
+  text-shadow: rgba(132, 40, 225, 0.879) 2px 5px;
+}
+.container-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 20rem;
+  height: 30rem;
+  border: groove 3px rgb(14, 14, 14);
+  margin-top: 1rem;
+  border-radius: 15px 15px 10px 10px;
+  box-shadow: 3px 3px 3px 3px rgb(160, 94, 222);
+}
+.img-card {
+  width: 10rem;
+  height: 18rem;
+  border-radius: 10px 10px 0 0;
+}
+.hr-line {
+  width: 100%;
+  height: 0.01rem;
+  background: linear-gradient(220.55deg, #ff3f3f 0%, #063cff 100%);
+  text-shadow: 0 0 10px rgb(0, 255, 153);
+  margin-top: 1rem;
+}
+
+.nameCharacter {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-top: 2rem;
+  color: yellow;
+  text-shadow: 0 0 10px rgb(0, 255, 153);
+}
+.quoteCharacter {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-top: 1rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.draw-border {
+  box-shadow: inset 0 0 0 4px #58cdd1;
+  color: #d6d913;
+  -webkit-transition: color 0.25s 0.0833333333s;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+
+.draw-border::before,
+.draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0rem;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+
+.draw-border:hover {
+  color: #63f756;
+  text-shadow: 0 0 10px rgb(0, 255, 153);
+}
+
+.draw-border:hover::before,
+.draw-border:hover::after {
+  border-color: #eb196e;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.draw-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+  transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem "Roboto Slab", sans-serif;
+  padding: 0.75em 2em;
+  letter-spacing: 0.05rem;
+  margin: 1em;
+  width: 13rem;
+}
+
+.btn:focus {
+  outline: 2px dotted #55d7dc;
+}
+
+footer{
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: rgb(239, 239, 129);
+  text-shadow: 0 0 10px rgb(0, 255, 153);
+}
